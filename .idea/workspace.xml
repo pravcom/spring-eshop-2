@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="spring-eshop" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1824b8b9-b17a-4d48-a8f3-64868980afba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/spring-eshop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/SpringEshopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/SpringEshopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/spring-eshop" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2cUSAU1fsnos83lMwJLpQubKfwk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/Users/DAkhtyamov/Desktop/java/eshop/spring-eshop-config",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "07067e7d5c5ac8076d07add1a10b4276",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringEshopApplication">
+    <configuration name="CloudRouterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.akhtyamov.cloudrouter.CloudRouterApplication" />
+      <module name="eshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.akhtyamov.cloudrouter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringEshopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-eshop" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.akhtyamov.springeshop.SpringEshopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringEshopConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-eshop-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.akhtyamov.springeshopconfig.SpringEshopConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CloudRouterApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1824b8b9-b17a-4d48-a8f3-64868980afba" name="Changes" comment="" />
+      <created>1708164521520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708164521520</updated>
+      <workItem from="1708164522555" duration="2673000" />
+      <workItem from="1708169677758" duration="726000" />
+      <workItem from="1708170476047" duration="1476000" />
+      <workItem from="1708171970829" duration="1889000" />
+      <workItem from="1708173882363" duration="438000" />
+      <workItem from="1708174333836" duration="130000" />
+      <workItem from="1708174482430" duration="153000" />
+      <workItem from="1708174644239" duration="278000" />
+      <workItem from="1708174951452" duration="741000" />
+      <workItem from="1708327243609" duration="1115000" />
+      <workItem from="1708329651186" duration="3177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

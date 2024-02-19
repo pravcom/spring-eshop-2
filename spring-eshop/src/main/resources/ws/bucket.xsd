@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://akhtyamov.com/springeshop/ws/bucket"
+           targetNamespace="http://akhtyamov.com/springeshop/ws/bucket"
+           elementFormDefault="qualified">
+    <xs:element name="getBucketRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBucketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bucket" type="tns:bucket"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="bucket">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="sum" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
