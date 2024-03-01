@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/pravcom/spring-cloud-example.git
           username: pravcom
           password: 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
-          default-label: main
+          default-label: master
           search-paths: spring-eshop-config
           clone-on-start: true
           ignore-local-ssh-settings: true

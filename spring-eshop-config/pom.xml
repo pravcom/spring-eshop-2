@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.akhtyamov</groupId>
-    <artifactId>spring-cloud-example</artifactId>
+    <artifactId>spring-eshop-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-example</name>
     <description>spring-cloud-example</description>

@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: spring-eshop-news
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+#  thymeleaf:
+#    cache: false
+#    prefix: classpath:/templates/

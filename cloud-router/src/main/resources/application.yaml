@@ -1,9 +1,8 @@
-
 zuul:
   routes:
     news:
       path: /news/**
-      url: http://localhost:8081/
+      url: http://localhost:8082/
 #    users:
 #      path: /users/**
 #      url: http://localhost:8082/
