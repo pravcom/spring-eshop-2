@@ -1,21 +1,27 @@
-#spring:
-#  jpa:
-#    hibernate:
-#      ddl-auto: validate
-#    show-sql: true
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/shop
-#    username: postgres
-#    password: admin
-#  flyway:
-#    baseline-on-migrate: true
-#  thymeleaf:
-#    cache: false
-#    prefix: classpath:/templates/
-
 spring:
-  application:
-    name: spring-eshop-client
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shop
+    username: postgres
+    password: admin
+  flyway:
+    baseline-on-migrate: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
 
-  config:
-    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      import-check:
+        enabled: false
+
+#---
+#spring:
+#  application:
+#    name: spring-eshop-client
+#
+#  config:
+#    import: optional:configserver:http://localhost:8888
