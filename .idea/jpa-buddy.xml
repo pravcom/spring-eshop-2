@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JpaBuddyIdeaProjectConfig">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="postgres">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
+    <option name="sourceModelValue" value="Default" />
+    <option name="targetDbValue" value="4c5ce7bb-96a3-4f75-a641-4f9d92787a78" />
+    <option name="reverseEngineeringLastDbConnectionId" value="4c5ce7bb-96a3-4f75-a641-4f9d92787a78__shop_public" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/akhtyamov/springeshop" />
   </component>
 </project>

@@ -39,8 +39,8 @@ public class Order {
 
     private String address;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<OrderDetails> details;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
+    private List<OrderDetail> details;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;

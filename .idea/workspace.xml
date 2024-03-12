@@ -10,21 +10,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1824b8b9-b17a-4d48-a8f3-64868980afba" name="Changes" comment="First cloud commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-router/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-router/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-router/src/main/java/com/akhtyamov/cloudrouter/CloudRouterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-router/src/main/java/com/akhtyamov/cloudrouter/CloudRouterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-router/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-router/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop-config/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-eshop-config/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop-config/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/out/production/resources/db/migration/V1__init_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/out/production/resources/db/migration/V1__init_DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/BucketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/BucketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ErrorControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ErrorControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/domain/OrderDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/BucketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/BucketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/BucketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/BucketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/db/migration/V1__init_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/db/migration/V1__init_DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/bucket.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/bucket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/error.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,29 +63,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DAkhtyamov/Desktop/java/eshop/spring-eshop-config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;07067e7d5c5ac8076d07add1a10b4276&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/Users/DAkhtyamov/Desktop/java/eshop/spring-eshop/src/main/resources/integration",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.haulmont.jpb.entityDeclaration",
+    "spring.configuration.checksum": "07067e7d5c5ac8076d07add1a10b4276",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DAkhtyamov\Desktop\java\eshop\spring-eshop\src\main\resources\integration" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -121,6 +150,8 @@
       <workItem from="1708327243609" duration="1115000" />
       <workItem from="1708329651186" duration="3177000" />
       <workItem from="1708334302750" duration="4517000" />
+      <workItem from="1710133713201" duration="1602000" />
+      <workItem from="1710136562248" duration="13533000" />
     </task>
     <task id="LOCAL-00001" summary="First cloud commit">
       <created>1708334392166</created>

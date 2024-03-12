@@ -1,0 +1,16 @@
+{
+  "orderId" : "1234",
+  "username" : "Petya",
+  "address" : "none",
+  "details" : [ {
+    "product" : "Milk",
+    "price" : 10.5,
+    "amount" : 1.0,
+    "sum" : 10.5
+  }, {
+    "product" : "Chocolate",
+    "price" : 100.5,
+    "amount" : 1.0,
+    "sum" : 100.5
+  } ]
+}

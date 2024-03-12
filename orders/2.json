@@ -1,0 +1,21 @@
+{
+  "orderId" : 2,
+  "username" : "admin",
+  "address" : "none",
+  "details" : [ {
+    "product" : "Beer",
+    "price" : 45.0,
+    "amount" : 1.0,
+    "sum" : 45.0
+  }, {
+    "product" : "Cheese",
+    "price" : 450.0,
+    "amount" : 1.0,
+    "sum" : 450.0
+  }, {
+    "product" : "Milk",
+    "price" : 65.0,
+    "amount" : 2.0,
+    "sum" : 130.0
+  } ]
+}

@@ -1,89 +1,102 @@
-create
-sequence
-bucket_seq start with 1 increment by 1;
-create
-sequence
-category_seq start with 1 increment by 1;
-create
-sequence
-order_details_seq start with 1 increment by 1;
-create
-sequence
-order_seq start with 1 increment by 1;
-create
-sequence
-product_seq start with 1 increment by 1;
-create
-sequence
-user_seq start with 1 increment by 1;
-create table buckets
+CREATE SEQUENCE IF NOT EXISTS bucket_seq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE IF NOT EXISTS category_seq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE IF NOT EXISTS order_detail_seq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE IF NOT EXISTS order_seq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE IF NOT EXISTS product_seq START WITH 1 INCREMENT BY 1;
+
+CREATE SEQUENCE IF NOT EXISTS user_seq START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE buckets
 (
-    id      bigint not null,
-    user_id bigint unique,
-    primary key (id)
+    id      BIGINT NOT NULL,
+    user_id BIGINT,
+    CONSTRAINT pk_buckets PRIMARY KEY (id)
 );
-create table buckets_product
+
+CREATE TABLE buckets_product
 (
-    bucket_id  bigint not null,
-    product_id bigint not null
+    bucket_id  BIGINT NOT NULL,
+    product_id BIGINT NOT NULL
 );
-create table categories
+
+CREATE TABLE categories
 (
-    id    bigint not null,
-    title varchar(255),
-    primary key (id)
+    id    BIGINT NOT NULL,
+    title VARCHAR(255),
+    CONSTRAINT pk_categories PRIMARY KEY (id)
 );
-create table orders
+
+CREATE TABLE orders
 (
-    sum     numeric(38, 2),
-    created timestamp(6),
-    id      bigint not null,
-    updated timestamp(6),
-    user_id bigint,
-    address varchar(255),
-    status  varchar(255) check (status in ('NEW', 'APPROVED', 'CANCELED', 'PAID', 'CLOSED')),
-    primary key (id)
+    id      BIGINT NOT NULL,
+    created TIMESTAMP WITHOUT TIME ZONE,
+    updated TIMESTAMP WITHOUT TIME ZONE,
+    user_id BIGINT,
+    sum     DECIMAL,
+    address VARCHAR(255),
+    status  VARCHAR(255),
+    CONSTRAINT pk_orders PRIMARY KEY (id)
 );
-create table orders_details
+
+CREATE TABLE order_detail
 (
-    amount     numeric(38, 2),
-    price      numeric(38, 2),
-    details_id bigint not null unique,
-    id         bigint not null,
-    order_id   bigint,
-    product_id bigint,
-    primary key (id)
+    id         BIGINT NOT NULL,
+    order_id   BIGINT,
+    product_id BIGINT,
+    amount     DECIMAL,
+    price      DECIMAL,
+    CONSTRAINT pk_orders_details PRIMARY KEY (id)
 );
-create table product_categories
+
+CREATE TABLE product_categories
 (
-    category_id bigint not null,
-    product_id  bigint not null
+    category_id BIGINT NOT NULL,
+    product_id  BIGINT NOT NULL
 );
-create table products
+
+CREATE TABLE products
 (
-    price numeric(38, 2),
-    id    bigint not null,
-    title varchar(255),
-    primary key (id)
+    id    BIGINT NOT NULL,
+    title VARCHAR(255),
+    price DECIMAL,
+    CONSTRAINT pk_products PRIMARY KEY (id)
 );
-create table users
+
+CREATE TABLE users
 (
-    archive   boolean not null,
---     bucket_id bigint unique,
-    id        bigint  not null,
-    email     varchar(255),
-    name      varchar(255),
-    password  varchar(255),
-    role      varchar(255) check (role in ('CLIENT', 'MANAGER', 'ADMIN')),
-    primary key (id)
+    id       BIGINT  NOT NULL,
+    name     VARCHAR(255),
+    password VARCHAR(255),
+    email    VARCHAR(255),
+    archive  BOOLEAN NOT NULL,
+    role     VARCHAR(255),
+    CONSTRAINT pk_users PRIMARY KEY (id)
 );
-alter table if exists buckets add constraint fk_user_id foreign key (user_id) references users;
-alter table if exists buckets_product add constraint fk_product_id foreign key (product_id) references products;
-alter table if exists buckets_product add constraint fk_bucket_id foreign key (bucket_id) references buckets;
-alter table if exists orders add constraint fk_user_id foreign key (user_id) references users;
-alter table if exists orders_details add constraint fk_order_id foreign key (order_id) references orders;
-alter table if exists orders_details add constraint fk_product_id foreign key (product_id) references products;
-alter table if exists orders_details add constraint fk_details_id foreign key (details_id) references orders_details;
-alter table if exists product_categories add constraint fk_category_id foreign key (category_id) references categories;
-alter table if exists product_categories add constraint fk_product_id foreign key (product_id) references products;
--- alter table if exists users add constraint fk_bucket_id foreign key (bucket_id) references buckets;
+
+ALTER TABLE buckets
+    ADD CONSTRAINT FK_BUCKETS_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
+
+ALTER TABLE order_detail
+    ADD CONSTRAINT FK_ORDER_DETAIL_ON_ORDER FOREIGN KEY (order_id) REFERENCES orders (id);
+
+ALTER TABLE order_detail
+    ADD CONSTRAINT FK_ORDER_DETAIL_ON_PRODUCT FOREIGN KEY (product_id) REFERENCES products (id);
+
+ALTER TABLE orders
+    ADD CONSTRAINT FK_ORDERS_ON_USER FOREIGN KEY (user_id) REFERENCES users (id);
+
+ALTER TABLE buckets_product
+    ADD CONSTRAINT fk_bucpro_on_bucket FOREIGN KEY (bucket_id) REFERENCES buckets (id);
+
+ALTER TABLE buckets_product
+    ADD CONSTRAINT fk_bucpro_on_product FOREIGN KEY (product_id) REFERENCES products (id);
+
+ALTER TABLE product_categories
+    ADD CONSTRAINT fk_procat_on_category FOREIGN KEY (category_id) REFERENCES categories (id);
+
+ALTER TABLE product_categories
+    ADD CONSTRAINT fk_procat_on_product FOREIGN KEY (product_id) REFERENCES products (id);

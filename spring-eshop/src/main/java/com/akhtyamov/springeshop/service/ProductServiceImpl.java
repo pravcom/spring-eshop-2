@@ -52,10 +52,16 @@ public class ProductServiceImpl implements ProductService {
         } else {
             bucketService.addProduct(bucket, Collections.singletonList(productId));
         }
-
+        //Добавляем Web Socket для динмаическго добавления продуктов в Bucket
         com.akhtyamov.springeshop.ws.bucket.Bucket bucketSW = new com.akhtyamov.springeshop.ws.bucket.Bucket();
         BucketDTO bucketDTO = bucketService.getBucketByUser(username);
-        bucketSW.setId(bucket.getId());
+
+        if (bucket ==null) {
+            bucketSW.setId(newBucket.getId());
+        }else {
+            bucketSW.setId(bucket.getId());
+        }
+
         bucketSW.setSum(bucketDTO.getSum());
         template.convertAndSend("/topic/bucket", bucketSW);
     }

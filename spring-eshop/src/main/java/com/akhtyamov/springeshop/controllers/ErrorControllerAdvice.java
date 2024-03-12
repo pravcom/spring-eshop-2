@@ -24,12 +24,12 @@ public class ErrorControllerAdvice {
         String errorMessage = (exception != null ? exception.getMessage() : "Unknown error");
         model.addAttribute("errorMessage", errorMessage);
 //Добавляем bucket
-        if (principal==null){
-            model.addAttribute("bucket", new BucketDTO(0,0.0,null));
-        }else {
-            BucketDTO bucketDTO = bucketService.getBucketByUser(principal.getName());
-            model.addAttribute("bucket", bucketDTO);
-        }
+//        if (principal==null){
+//            model.addAttribute("bucket", new BucketDTO(0,0.0,null));
+//        }else {
+//            BucketDTO bucketDTO = bucketService.getBucketByUser(principal.getName());
+//            model.addAttribute("bucket", bucketDTO);
+//        }
 
         return "error";
     }

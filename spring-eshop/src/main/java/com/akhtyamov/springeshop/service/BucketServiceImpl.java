@@ -2,9 +2,7 @@ package com.akhtyamov.springeshop.service;
 
 import com.akhtyamov.springeshop.dao.BucketRepository;
 import com.akhtyamov.springeshop.dao.ProductRepository;
-import com.akhtyamov.springeshop.domain.Bucket;
-import com.akhtyamov.springeshop.domain.Product;
-import com.akhtyamov.springeshop.domain.User;
+import com.akhtyamov.springeshop.domain.*;
 import com.akhtyamov.springeshop.dto.BucketDTO;
 import com.akhtyamov.springeshop.dto.BucketDetailDTO;
 import lombok.AllArgsConstructor;
@@ -23,11 +21,12 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class BucketServiceImpl implements BucketService{
+public class BucketServiceImpl implements BucketService {
     private final BucketRepository bucketRepository;
     private final ProductRepository productRepository;
     private final UserService userService;
     private final SimpMessagingTemplate template;
+    private final OrderService orderService;
 
     @Override
     @Transactional
@@ -59,7 +58,7 @@ public class BucketServiceImpl implements BucketService{
     @Override
     public BucketDTO getBucketByUser(String name) {
         User user = userService.findByName(name);
-        if (user==null || user.getBucket()==null){
+        if (user == null || user.getBucket() == null) {
             return new BucketDTO();
         }
 
@@ -68,12 +67,12 @@ public class BucketServiceImpl implements BucketService{
 
         List<Product> products = user.getBucket().getProducts();
 
-        for (Product product:products){
+        for (Product product : products) {
             BucketDetailDTO detail = mapByProductId.get(product.getId());
-            if (detail == null){
-                mapByProductId.put(product.getId(),  new BucketDetailDTO(product));
-            }else {
-                detail.setAmount(detail.getAmount().add( new BigDecimal(1)));
+            if (detail == null) {
+                mapByProductId.put(product.getId(), new BucketDetailDTO(product));
+            } else {
+                detail.setAmount(detail.getAmount().add(new BigDecimal(1)));
                 detail.setSum((detail.getSum()) + Double.valueOf(product.getPrice().toString()));
             }
 
@@ -87,11 +86,49 @@ public class BucketServiceImpl implements BucketService{
     @Override
     public void removeProduct(Long id, Principal principal) {
         User user = userService.findByName(principal.getName());
-        if (user==null) throw new RuntimeException("User not found - " + principal.getName());
+        if (user == null) throw new RuntimeException("User not found - " + principal.getName());
 
         Bucket bucket = user.getBucket();
-        bucket.getProducts().removeIf(element -> element.getId()==id);
+        bucket.getProducts().removeIf(element -> element.getId() == id);
         bucketRepository.delete(bucket);
         bucketRepository.save(bucket);
+    }
+
+    @Override
+    @Transactional
+    public void commitBucketToOrder(String username) {
+        User user = userService.findByName(username);
+        if (user == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        Bucket bucket = user.getBucket();
+        if (bucket == null || bucket.getProducts().isEmpty()) {
+            return;
+        }
+        // Создаем заказ
+        Order order = new Order();
+        order.setStatus(OrderStatus.NEW);
+        order.setUser(user);
+
+        Map<Product, Long> productWithAmount = bucket.getProducts().stream()
+                .collect(Collectors.groupingBy(product -> product, Collectors.counting()));
+
+        List<OrderDetail> orderDetails = productWithAmount.entrySet().stream()
+                .map(pair -> new OrderDetail(order, pair.getKey(), pair.getValue()))
+                .collect(Collectors.toList());
+
+        BigDecimal total = new BigDecimal(orderDetails.stream()
+                .map(detail -> detail.getPrice().multiply(detail.getAmount()))
+                .mapToDouble(BigDecimal::doubleValue).sum());
+
+        order.setDetails(orderDetails);
+        order.setSum(total);
+        order.setAddress("none");
+
+        orderService.saveOrder(order);
+        bucket.getProducts().clear();
+        bucketRepository.save(bucket);
+
     }
 }

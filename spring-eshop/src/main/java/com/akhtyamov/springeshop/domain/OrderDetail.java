@@ -13,23 +13,30 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "orders_details")
-public class OrderDetails {
-    private static final String SEQ_NAME = "order_details_seq";
+@Table(name = "order_detail")
+public class OrderDetail {
+    private static final String SEQ_NAME = "order_detail_seq";
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
     @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME, allocationSize = 1)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "order_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     private Product product;
 
     private BigDecimal amount;
 
     private BigDecimal price;
+
+    public OrderDetail(Order order, Product product, Long amount) {
+        this.order = order;
+        this.product = product;
+        this.amount = new BigDecimal(amount);
+        this.price = product.getPrice();
+    }
 }

@@ -136,6 +136,12 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
+<!--        Spring integration-->
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-http</artifactId>
+        </dependency>
+
     </dependencies>
 
 
