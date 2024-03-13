@@ -12,11 +12,11 @@ import java.security.Principal;
 
 @ControllerAdvice
 public class ErrorControllerAdvice {
-    private final BucketService bucketService;
+//    private final BucketService bucketService;
 
-    public ErrorControllerAdvice(BucketService bucketService) {
-        this.bucketService = bucketService;
-    }
+//    public ErrorControllerAdvice(BucketService bucketService) {
+//        this.bucketService = bucketService;
+//    }
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
