@@ -14,36 +14,6 @@ public class UserDTO {
     private String password;
     private String matchingPassword;
     private String email;
+    private String activeCode;
 
-//    public String getUsername() {
-//        return username;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public String getMatchingPassword() {
-//        return matchingPassword;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
-//
-//    public void setMatchingPassword(String matchingPassword) {
-//        this.matchingPassword = matchingPassword;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
 }

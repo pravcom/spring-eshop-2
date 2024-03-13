@@ -31,9 +31,17 @@ public class UserController {
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     @GetMapping("/new")
-    public String newUser(Model model) {
+    public String newUser(Model model, Principal principal) {
         System.out.println("called method newUser");
         model.addAttribute("user", new UserDTO());
+
+        if (principal==null){
+            model.addAttribute("bucket", new BucketDTO(0,0.0,null));
+        }else {
+            BucketDTO bucketDTO = bucketService.getBucketByUser(principal.getName());
+            model.addAttribute("bucket", bucketDTO);
+        }
+
         return "user";
     }
 
@@ -113,5 +121,11 @@ public class UserController {
         return "redirect:/users/profile";
     }
 
+    @GetMapping("/activate/{code}")
+    public String activateUser(Model model, @PathVariable("code") String activateCode){
+        boolean activated = userService.activateUser(activateCode);
+        model.addAttribute("activated", activated);
+        return "activate-user";
+    }
 
 }

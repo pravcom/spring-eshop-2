@@ -9,17 +9,21 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824b8b9-b17a-4d48-a8f3-64868980afba" name="Changes" comment="Spring Intergration&#10;Добавил сервис Orders для его запуска требуется запустить проект spring-integration -&gt; SpringIntegrationApplication&#10;В eshop добавили OrderServiceImpl&#10;И на странице Bucket добавили кнопку Commit bucket которая отвечает за функционал integrations, по ее нажатию если включен spring-integration в папку Orders сохраняется заказ">
+    <list default="true" id="1824b8b9-b17a-4d48-a8f3-64868980afba" name="Changes" comment="Добавил тесты Spring Tests">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c5ce7bb-96a3-4f75-a641-4f9d92787a78.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c5ce7bb-96a3-4f75-a641-4f9d92787a78.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c5ce7bb-96a3-4f75-a641-4f9d92787a78/storage_v2/_src_/database/shop.9to1AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4c5ce7bb-96a3-4f75-a641-4f9d92787a78/storage_v2/_src_/database/shop.9to1AA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-eshop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/config/OrderIntegrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/config/OrderIntegrationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ErrorControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ErrorControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/dto/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-eshop/src/test/java/com/akhtyamov/springeshop/SpringEshopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/test/java/com/akhtyamov/springeshop/SpringEshopApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-eshop/src/test/java/com/akhtyamov/springeshop/service/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-eshop/src/test/java/com/akhtyamov/springeshop/service/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "C:/Users/DAkhtyamov/Desktop/java/eshop/spring-eshop/src/test/java/resources",
+    "last_opened_file_path": "C:/Users/DAkhtyamov/Desktop/java/eshop/spring-eshop/src/test/java/resources/db/migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,8 +89,12 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DAkhtyamov\Desktop\java\eshop\spring-eshop\src\test\java\resources\db\migration" />
       <recent name="C:\Users\DAkhtyamov\Desktop\java\eshop\spring-eshop\src\test\java\resources" />
       <recent name="C:\Users\DAkhtyamov\Desktop\java\eshop\spring-eshop\src\main\resources\integration" />
     </key>
@@ -104,7 +112,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest">
+  <component name="RunManager" selected="Spring Boot.SpringEshopApplication">
     <configuration name="ProductControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-eshop" />
       <extension name="coverage">
@@ -218,7 +226,7 @@
       <workItem from="1708329651186" duration="3177000" />
       <workItem from="1708334302750" duration="4517000" />
       <workItem from="1710133713201" duration="1602000" />
-      <workItem from="1710136562248" duration="27547000" />
+      <workItem from="1710136562248" duration="41253000" />
     </task>
     <task id="LOCAL-00001" summary="First cloud commit">
       <created>1708334392166</created>
@@ -234,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710219474449</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил тесты Spring Tests">
+      <created>1710307403926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710307403926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +278,28 @@
     </ignored-roots>
     <MESSAGE value="First cloud commit" />
     <MESSAGE value="Spring Intergration&#10;Добавил сервис Orders для его запуска требуется запустить проект spring-integration -&gt; SpringIntegrationApplication&#10;В eshop добавили OrderServiceImpl&#10;И на странице Bucket добавили кнопку Commit bucket которая отвечает за функционал integrations, по ее нажатию если включен spring-integration в папку Orders сохраняется заказ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Intergration&#10;Добавил сервис Orders для его запуска требуется запустить проект spring-integration -&gt; SpringIntegrationApplication&#10;В eshop добавили OrderServiceImpl&#10;И на странице Bucket добавили кнопку Commit bucket которая отвечает за функционал integrations, по ее нажатию если включен spring-integration в папку Orders сохраняется заказ" />
+    <MESSAGE value="Добавил тесты Spring Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил тесты Spring Tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/UserServiceImpl.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/controllers/UserController.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-eshop/src/main/java/com/akhtyamov/springeshop/service/MailSenderServiceImpl.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
