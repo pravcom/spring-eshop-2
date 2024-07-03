@@ -26,8 +26,7 @@ mail:
     host: smtp.mail.ru #smtp.gmail.com
     port: 587
     username: ahtyamovden@mail.ru
-    password: yZpva7WRyt5XXHFLD4iY
-
+    password: TESTSTES
 #---
 #spring:
 #  application:
